@@ -33,8 +33,18 @@ namespace DMS_quary_data
         private void Form1_Load(object sender, EventArgs e)
         {
             connect();
+            //string sql = "select * from Categories";
+            //da = new SqlDataAdapter(sql,conn);
+            //DataSet ds = new DataSet();
+            //da.Fill(ds);
+            //dataGridView1.DataSource = ds.Tables[0];
+            //
+        }
+
+        private void showData()
+        {
             string sql = "select * from Categories";
-            da = new SqlDataAdapter(sql,conn);
+            da = new SqlDataAdapter(sql, conn);
             DataSet ds = new DataSet();
             da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
